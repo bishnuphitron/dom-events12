@@ -18,32 +18,33 @@
     <li class="item">At, quibusdam.</li>
   </ul>
   <button id="add-item">Add Item</button>
+
+  <script>
+    // const items = document.getElementsByClassName('item');
+    // for (const item of items) {
+    //   item.addEventListener('click', function (event) {
+    //     // document.getElementById('item-container').removeChild(item);
+    //     // console.log(event.target);
+    //     // console.log(event.target.parentNode);
+    //     event.target.parentNode.removeChild(event.target);
+    //   })
+    // }
+  
+    document.getElementById('add-item').addEventListener
+    ('click', function () {
+      const li = document.createElement('li');
+      li.classList.add('item');
+      li.innerText = 'Brand new item';
+      const parent = document.getElementById('item-container');
+      parent.appendChild(li);
+    })
+  
+    document.getElementById('item-container').addEventListener
+    ('click', function (event) {
+      // console.log(event.target);
+      event.target.parentNode.removeChild(event.target);
+    })
+  </script>
+  
 </body>
-
-<script>
-  // const items = document.getElementsByClassName('item');
-  // for (const item of items) {
-  //   item.addEventListener('click', function (event) {
-  //     // document.getElementById('item-container').removeChild(item);
-  //     // console.log(event.target);
-  //     // console.log(event.target.parentNode);
-  //     event.target.parentNode.removeChild(event.target);
-  //   })
-  // }
-
-  document.getElementById('add-item').addEventListener
-  ('click', function () {
-    const li = document.createElement('li');
-    li.classList.add('item');
-    li.innerText = 'Brand new item';
-    const parent = document.getElementById('item-container');
-    parent.appendChild(li);
-  })
-
-  document.getElementById('item-container').addEventListener
-  ('click', function (event) {
-    // console.log(event.target);
-    event.target.parentNode.removeChild(event.target);
-  })
-</script>
 </html>
